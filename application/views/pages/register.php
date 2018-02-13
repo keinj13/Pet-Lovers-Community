@@ -17,6 +17,10 @@
 			<input type="text" name="last_name" class="" placeholder="Enter Last Name"/>
 		</div>
 		<div>
+			<label for="">Username</label>
+			<input type="text" name="username" class="" placeholder="Enter Username"/>
+		</div>
+		<div>
 			<label for="">Email</label>
 			<input type="text" name="email" class="" placeholder="Enter Email"/>
 		</div>

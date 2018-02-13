@@ -8,6 +8,7 @@ class Register extends CI_Controller {
 
 		$this->form_validation->set_rules('first_name', 'First Name', 'required');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
+		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
@@ -17,9 +18,10 @@ class Register extends CI_Controller {
 			$this->load->view('template/footer');
 		}
 		else{
-			$result['username'] = $this->register_model->success();
+			$result = $this->register_model->success();
+			$this->session->set_userdata('user', $result);
 			$this->load->view('template/header');
-			$this->load->view('pages/user', $result);
+			redirect('user');
 			$this->load->view('template/footer');
 		}
 	}

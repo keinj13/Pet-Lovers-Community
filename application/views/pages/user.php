@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/user.css">
@@ -38,12 +37,11 @@
 
 <nav class="navbar navbar-custom" style="background-color: #A9A9A9;">
   <div class="container">
-
 	<p class="navbar-text" style="color: #ECECEC;">EVERY PET DESERVES A HOME, BUT NOT EVERY HOME DESERVES A PET</p>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="DashUserDropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= $username; ?> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php $user = $this->session->userdata('user'); ?><?php echo $user; ?> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#"> Profile </span></a></li>
             <li class="divider"></li>
